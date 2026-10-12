@@ -2,7 +2,7 @@
 
 Site institucional de uma página (one-page) para uma psicóloga clínica, feito com **HTML, CSS e JavaScript puro**, sem frameworks e sem etapa de build. O objetivo é apresentar a profissional, explicar o que é a psicoterapia, mostrar as áreas de atendimento e facilitar o contato por WhatsApp.
 
-🔗 **Site no ar:** [COLOQUE_AQUI_O_LINK_DO_SITE](COLOQUE_AQUI_O_LINK_DO_SITE)
+🔗 **Site no ar:** [https://psicologarenataqueiroz.com.br/](https://psicologarenataqueiroz.com.br/)
 
 ## Seções do site
 
