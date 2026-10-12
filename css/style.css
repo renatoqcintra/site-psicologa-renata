@@ -1,0 +1,459 @@
+:root {
+  /* CORES ORIGINAIS PRESERVADAS */
+  --bg-main: #fcf8f2;
+  --text-main: #4a3e32;
+  --header-bg: #f1e7dc;
+  --header-bg-glass: rgba(241, 231, 220, 0.95);
+  --btn-bg: #7e6a54;
+  --text-muted: #6d5a47;
+  --bg-terapias: #f7f1e9;
+  --bg-cards: #f3e7d8;
+
+  /* TIPOGRAFIA LIMPA E MODERNA */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HEADER FIXO MODERNO */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--header-bg);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+header.scrolled {
+  background: var(--header-bg-glass);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-area img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.title-block h1 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.title-block span {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+nav.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav.main-nav a {
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-main);
+  transition: color 0.2s ease;
+}
+
+nav.main-nav a:hover {
+  color: var(--btn-bg);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  padding: 160px 0 90px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--bg-cards);
+  color: var(--btn-bg);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-family: var(--font-heading);
+}
+
+.hero-text h2 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  font-size: 17px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--btn-bg);
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(126, 106, 84, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(126, 106, 84, 0.3);
+  filter: brightness(0.95);
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* SOBRE */
+.sobre {
+  padding: 90px 0;
+  background: var(--header-bg);
+}
+
+.sobre-content {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sobre-content h2 {
+  font-size: 34px;
+  margin-bottom: 24px;
+}
+
+.sobre-destaque {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.sobre-content p {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* TERAPIAS */
+.terapias {
+  background: var(--bg-terapias);
+  padding: 100px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.terapia-showcase {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  margin-bottom: 50px;
+}
+
+.terapia-banner img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.terapia-desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.terapia-desc p {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-cards);
+  color: var(--btn-bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* CONTATO */
+.contato {
+  padding: 100px 0;
+}
+
+.contato-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background: var(--header-bg);
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.contato-img img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 280px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.insta { background: #d64f82; }
+.maps { background: #445eb5; }
+.btn-zap { background: #25d366; } /* Chave fechada e nome ajustado (usei o verde original do wpp) */
+
+/* WHATSAPP FLUTUANTE */
+.zap {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s ease;
+  z-index: 999;
+}
+
+.zap:hover {
+  transform: scale(1.08);
+}
+
+/* FOOTER */
+footer {
+  background: var(--header-bg);
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.04);
+}
+
+footer p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .hero-container, .terapia-showcase, .contato-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-container {
+    padding-top: 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 34px;
+  }
+
+  .hero-img img, .terapia-banner img, .contato-img img {
+    max-width: 100%;
+  }
+
+  .social-links {
+    width: 100%;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  nav.main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--header-bg-glass);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  }
+
+  nav.main-nav.active {
+    max-height: 280px;
+  }
+
+  nav.main-nav a {
+    display: block;
+    padding: 18px;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+  }
+}
